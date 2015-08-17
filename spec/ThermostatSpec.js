@@ -30,7 +30,7 @@ describe("Thermostat", function() {
 
   describe("When resetting temperature", function() {
     it("should reset to 20 degrees", function() {
-      thermostat.decreaseTemp(1)
+      thermostat.decreaseTemp(3)
       expect(thermostat.resetTemp()).toEqual(20)
     });
   });
@@ -46,6 +46,17 @@ describe("Thermostat", function() {
       thermostat.powerSaveOn()
       expect(thermostat.maximumTemp).toEqual(25);
     });
+  });
+
+  describe("temperature regulation", function() {
+    it("cannot go above maximum temperature", function() {
+      expect( function(){ thermostat.increaseTemp(6) }).toThrowError("Temperature cannot go above 25.");
+    });
+
+    it("cannot go below temperature", function() {
+      expect( function(){ thermostat.decreaseTemp(12) }).toThrowError("Temperature cannot go below 10.");
+    });
+   
   });
 
 

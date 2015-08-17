@@ -9,11 +9,15 @@ Thermostat.defaultTemp = 20;
 
 
 Thermostat.prototype.increaseTemp = function(degrees) {
-  return this.temperature += degrees;
+  var temp = this.temperature += degrees
+  this.controlMinMaxTemp(temp)
+  return temp
 };
 
 Thermostat.prototype.decreaseTemp = function(degrees) {
-  return this.temperature -= degrees;
+  var temp = this.temperature -= degrees
+  this.controlMinMaxTemp(temp)
+  return temp
 };
 
 Thermostat.prototype.resetTemp = function() {
@@ -29,4 +33,13 @@ Thermostat.prototype.powerSaveOn = function() {
 Thermostat.prototype.powerSaveOff = function() {
   this.maximumTemp = 32;
   return this.isPowerSaverOn = false;
+};
+
+Thermostat.prototype.controlMinMaxTemp = function(temp) {
+  if (temp < this.minimumTemp) {
+    throw Error('Temperature cannot go below ' + this.minimumTemp + '.');
+  }
+  else if (temp > this.maximumTemp) {
+    throw Error('Temperature cannot go above ' + this.maximumTemp + '.');
+  }
 };
