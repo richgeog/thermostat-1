@@ -42,15 +42,6 @@ Thermostat.prototype.powerSaveOff = function() {
   return this.isPowerSaverOn = false;
 };
 
-// Thermostat.prototype.controlMinMaxTemp = function(temp) {
-//   if (temp < this.minimumTemp) {
-//     return this.minimumTemp;
-//   }
-//   else if (temp > this.maximumTemp) {
-//     return this.maximumTemp;
-//   }
-// };
-
 
 Thermostat.prototype.energyUsage = function() {
   if (this.temperature < 18) {
