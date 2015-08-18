@@ -18,19 +18,19 @@ describe("Thermostat", function() {
 
   describe("When increasing temperature", function() {
     it("should go up by 1 degree when asked", function() {
-      expect(thermostat.increaseTemp(1)).toEqual(21)
+      expect(thermostat.increaseTemp()).toEqual(21)
     });
   });
 
   describe("When decreasing temperature", function() {
     it("should go down by 1 degree when asked", function() {
-      expect(thermostat.decreaseTemp(1)).toEqual(19)
+      expect(thermostat.decreaseTemp()).toEqual(19)
     });
   });
 
   describe("When resetting temperature", function() {
     it("should reset to 20 degrees", function() {
-      thermostat.decreaseTemp(3)
+      thermostat.decreaseTemp()
       expect(thermostat.resetTemp()).toEqual(20)
     });
   });
@@ -50,14 +50,18 @@ describe("Thermostat", function() {
 
   describe("temperature regulation", function() {
     it("cannot go above maximum temperature", function() {
-      expect( function(){ thermostat.increaseTemp(6) }).toThrowError("Temperature cannot go above 25.");
+      thermostat.temperature = 25
+      expect( function(){ thermostat.increaseTemp() }).toThrowError("Temperature cannot go above 25.");
     });
 
     it("cannot go below temperature", function() {
-      expect( function(){ thermostat.decreaseTemp(12) }).toThrowError("Temperature cannot go below 10.");
+      thermostat.temperature = 10
+      expect( function(){ thermostat.decreaseTemp() }).toThrowError("Temperature cannot go below 10.");
     });
    
   });
+
+  
 
 
 });
