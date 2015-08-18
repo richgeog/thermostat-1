@@ -8,19 +8,36 @@ var temperature = document.getElementById("temperature");
   temperature.innerHTML = thermostat.showTemp();
   TempColour();
 
-var upTemperature = document.getElementById("increase");
-  upTemperature.onclick = function() {
+// var upTemperature = document.getElementById("increase");
+//   upTemperature.onclick = function() {
+//     thermostat.increaseTemp();
+//     temperature.innerHTML = thermostat.showTemp();
+//     TempColour();
+//   }
+
+$(document).ready(function() {
+  $("#increase").click(function() {
     thermostat.increaseTemp();
     temperature.innerHTML = thermostat.showTemp();
     TempColour();
-  }
+  })
+})
 
-var downTemperature = document.getElementById("decrease");
-  downTemperature.onclick = function() {
+$(document).ready(function() {
+  $("#decrease").click(function() {
     thermostat.decreaseTemp();
     temperature.innerHTML = thermostat.showTemp();
     TempColour();
-  }
+  })
+})
+
+
+// var downTemperature = document.getElementById("decrease");
+//   downTemperature.onclick = function() {
+//     thermostat.decreaseTemp();
+//     temperature.innerHTML = thermostat.showTemp();
+//     TempColour();
+//   }
 
 var resetTemperature = document.getElementById("reset");
   resetTemperature.onclick = function() {
