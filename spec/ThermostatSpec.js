@@ -48,20 +48,4 @@ describe("Thermostat", function() {
     });
   });
 
-  // describe("temperature regulation", function() {
-  //   it("cannot go above maximum temperature", function() {
-  //     thermostat.temperature = 25
-  //     expect( function(){ thermostat.increaseTemp() }).toThrowError("Temperature cannot go above 25.");
-  //   });
-
-  //   it("cannot go below temperature", function() {
-  //     thermostat.temperature = 10
-  //     expect( function(){ thermostat.decreaseTemp() }).toThrowError("Temperature cannot go below 10.");
-  //   });
-   
-  // });
-
-  
-
-
 });

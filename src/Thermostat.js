@@ -8,13 +8,13 @@ var Thermostat = function() {
 
 
 Thermostat.prototype.showTemp = function() {
-  return this.temperature;
+  return this.temperature + ' C';
 };
 
 Thermostat.prototype.increaseTemp = function() {
   if (this.temperature >= this.maximumTemp) {
   }
-  else { 
+  else {
     return this.temperature += 1
   }
 };

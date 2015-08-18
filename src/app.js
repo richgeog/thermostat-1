@@ -4,34 +4,38 @@ TempColour = function() {
   temperature.style.color = thermostat.energyUsage();
 }
 
+displayTemp = function() {
+  temperature.innerHTML = thermostat.showTemp();
+}
+
 $(document).ready(function() {
   $("#temperature").show(function() {
-    temperature.innerHTML = thermostat.showTemp();
+    displayTemp();
     TempColour();
   })
   $("#increase").click(function() {
     thermostat.increaseTemp();
-    temperature.innerHTML = thermostat.showTemp();
+    displayTemp();
     TempColour();
   })
   $("#decrease").click(function() {
     thermostat.decreaseTemp();
-    temperature.innerHTML = thermostat.showTemp();
+    displayTemp();
     TempColour();
   })
   $("#reset").click(function() {
     thermostat.resetTemp();
-    temperature.innerHTML = thermostat.showTemp();
+    displayTemp();
     TempColour();
   })
   $('#power_save').click(function() {
     powerSaveChange();
   })
-  
+
   function powerSaveChange() {
     if ($("#power_save").is(':checked') ) {
       thermostat.powerSaveOn();
-      temperature.innerHTML = thermostat.showTemp();
+      displayTemp();
     } else {
       thermostat.powerSaveOff();
     }
@@ -39,4 +43,3 @@ $(document).ready(function() {
 })
 
 
- 
