@@ -12,15 +12,19 @@ Thermostat.prototype.showTemp = function() {
 };
 
 Thermostat.prototype.increaseTemp = function() {
-  var temp = this.temperature += 1
-  this.controlMinMaxTemp(temp)
-  return temp
+  if (this.temperature >= this.maximumTemp) {
+  }
+  else { 
+    return this.temperature += 1
+  }
 };
 
 Thermostat.prototype.decreaseTemp = function() {
-  var temp = this.temperature -= 1
-  this.controlMinMaxTemp(temp)
-  return temp
+  if (this.temperature <= this.minimumTemp) {
+  }
+  else {
+    return this.temperature -= 1
+  }
 };
 
 Thermostat.prototype.resetTemp = function() {
@@ -38,14 +42,14 @@ Thermostat.prototype.powerSaveOff = function() {
   return this.isPowerSaverOn = false;
 };
 
-Thermostat.prototype.controlMinMaxTemp = function(temp) {
-  if (temp < this.minimumTemp) {
-    throw Error('Temperature cannot go below ' + this.minimumTemp + '.');
-  }
-  else if (temp > this.maximumTemp) {
-    throw Error('Temperature cannot go above ' + this.maximumTemp + '.');
-  }
-};
+// Thermostat.prototype.controlMinMaxTemp = function(temp) {
+//   if (temp < this.minimumTemp) {
+//     return this.minimumTemp;
+//   }
+//   else if (temp > this.maximumTemp) {
+//     return this.maximumTemp;
+//   }
+// };
 
 
 Thermostat.prototype.energyUsage = function() {
