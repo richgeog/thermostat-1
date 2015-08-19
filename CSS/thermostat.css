@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: auto;
+  font-size: 10em;
+  color: white;
+  font-family: 'Bangers', cursive;
+  }
+
+body {
+  background: url("../public/images/green-cornfield.jpg");
+  background-size: cover;
+  }
+
+.buttons {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5em;
+  color: black;
+  }

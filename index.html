@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="CSS/thermostat.css">
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
+    <title> Thermostat </title>
+  </head>
 
-  <title>Thermostat</title>
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
-  <style>
-    body { background: url("public/images/green-cornfield.jpg");
-           background-size: cover; }
-    section {text-align: center; margin-top: 250px;
-             font-size: 1.9em;
-            color: white; }
-  </style>
-</head>
+    <body>
 
-<body>
-  <section>
+      <h1 id="temperature"> </h1>
+      <div class="buttons">
+        <button type="button" id="increase"> UP </button>
+        <button type="button" id="decrease"> DOWN </button>
+        <button type="button" id="reset"> RESET </button>
+        <input type="checkbox" id="power_save" checked> Power Save Mode <br>
+      </div>
 
-  <h1 id="temperature"> </h1>
-  <button type="button" id="increase"> UP </button>
-  <button type="button" id="decrease"> DOWN </button>
-  <button type="button" id="reset"> RESET </button>
-  <input type="checkbox" id="power_save" checked> Power Save Mode <br>
+    </body>
 
-</section>
-
-</body>
-
-<script src="src/Thermostat.js"></script>
-<script src="src/app.js"></script>
+  <script src="src/Thermostat.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/weather.js"></script>
 
 </html>
