@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="CSS/thermostat.css">
-  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js'></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/thermostat.css">
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <script src="src/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <title> Thermostat </title>
   </head>
 
     <body>
 
       <h1 id="temperature"> </h1>
-      <div class="buttons">
-        <button type="button" id="increase"> UP </button>
-        <button type="button" id="decrease"> DOWN </button>
-        <button type="button" id="reset"> RESET </button>
-        <input type="checkbox" id="power_save" checked> Power Save Mode <br>
-      </div>
+
+      <section>
+        <p class="location"> Enter City: <p>
+        <input class="city" type="text" name="location">
+        <input class="locbtn" type="submit" name="GO">
+
+        <br>
+      </section>
+
+        <button class="buttonup" type="button" id="increase"> UP </button>
+        <button class="buttondown" type="button" id="decrease"> DOWN </button>
+        <button class="buttonreset" type="button" id="reset"> RESET </button>
+
+        <br>
+
+        <input class="powersavebutton" type="checkbox" id="power_save" checked>
+        <p class="powersavetext"> Power Save Mode <p>
 
     </body>
 

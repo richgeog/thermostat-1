@@ -12,9 +12,66 @@ body {
   background-size: cover;
   }
 
-.buttons {
-  text-align: center;
-  margin-top: 50px;
+.buttonup,
+.buttondown,
+.buttonreset {
+  width: 150px;
+  border-radius: 10px;
+  margin-right: 25px;
   font-size: 1.5em;
-  color: black;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border: 100px;
+}
+
+.buttonup {
+  background: red;
+  margin-left: 460px;
   }
+
+.buttondown {
+  background: darkblue;
+}
+
+.buttonreset {
+  background: grey;
+}
+
+.powersavebutton {
+  margin: auto;
+  position: absolute;
+}
+
+.powersavetext {
+  color: white;
+  margin-top: 25px;
+  margin-left: 580px;
+  font-size: 1.5em;
+}
+
+.city {
+  margin-bottom: 30px;
+}
+
+.location {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.locbtn {
+  background: #00ff04;
+  border-radius: 10px;
+  width: 80px;
+  color: white;
+  font-weight: bold;
+}
+
+section {
+  margin-left: 580px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
