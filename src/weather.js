@@ -1,20 +1,21 @@
-var weather;
-
-// $(document).ready(function(){
-//   $.getJSON("http://api.openweathermap.org/data/2.5/find?q=London&units=metric",function(result){
-//     weather = result;
-//     alert("City: "+result.list[0].name);
-//     alert("Weather: "+ result.list[0].main.temp);
-//     });
-// });
-
 $(document).ready(function() {
+
+  showCity = function(city) {
+    $('.city').html(city);
+  }
+
+  showWeather = function(weather) {
+    $('.weather').html(weather);
+  }
+
   $('.locbtn').click(function() {
-    var loc = $('.city').val();
+    var loc = $('#loccity').val();
     $.getJSON("http://api.openweathermap.org/data/2.5/find?q=" + loc + "&units=metric",function(result){
-      weather = result;
-      alert("City: "+result.list[0].name);
-      alert("Weather: "+ Math.floor(result.list[0].main.temp));
-      });
+      var weather = result.list[0].name
+      var city = Math.floor(result.list[0].main.temp) + ' °C';
+      showCity(city);
+      showWeather(weather);
     });
+  });
+
 });

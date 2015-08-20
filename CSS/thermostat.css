@@ -12,6 +12,15 @@ body {
   background-size: cover;
   }
 
+section {
+  margin-left: 580px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
 .buttonup,
 .buttondown,
 .buttonreset {
@@ -65,13 +74,4 @@ body {
   width: 80px;
   color: white;
   font-weight: bold;
-}
-
-section {
-  margin-left: 580px;
-}
-
-p {
-  margin-top: 5px;
-  margin-bottom: 15px;
 }
